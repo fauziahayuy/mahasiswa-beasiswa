@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Mahasiswa Beasiswa Kaltim 2024</title>
+    <link rel="icon" href="img/logo/logo_disdik.png">
+
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="node_modules/jqvmap/dist/jqvmap.min.css">
+    <link rel="stylesheet" href="node_modules/weathericons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="node_modules/weathericons/css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="node_modules/summernote/dist/summernote-bs4.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        body{
+            background: linear-gradient(90deg, rgba(0,206,154,1) 0%, rgba(0,187,230,1) 56%, rgba(0,141,255,1) 100%);
+        }
+
+        body::-webkit-scrollbar{
+            display: none;
+        }
+
+        .card-header{
+          display: block !important;
+        }
+
+        .btn-login{
+            background-color: #00447A;
+            color: white;
+        }
+
+        .btn-login:hover{
+            background-color: #0071CC !important;
+            color: white !important;
+        }
+    </style>
+
+</head>
+<body>
+    <section id="login lgn">
+        <div class="container">
+            <div class="card card-login shadow-lg m-4">
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-md text-center align-self-center">
+                            <img src="img/bg/login.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md">
+                            <div class="card bg-secondary">
+                                <div class="card-body px-5 py-5">
+                                    <h5 class="text-center mb-5" style="color: #00447A;">Selamat Datang di BEASISWA KALTIM</h5>
+                                    <form>
+                                        <div class="mb-3">
+                                          <label for="exampleInputEmail1" class="form-label font-weight-bold" style="color: #003326;">Email</label>
+                                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                        
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="exampleInputPassword1" class="form-label font-weight-bold" style="color: #003326;"">Password</label>
+                                          <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>                    
+                                    </form>
+                                    <a href="#" class="d-flex justify-content-end">Lupa Password?</a>
+                                    <div class="mt-3 mb-3">
+                                        <a href="#" class="btn btn-block btn-lg btn-login rounded">LOGIN</a>
+                                    </div>  
+                                    <div class="row">
+                                        <div class="col-md"><hr></div>
+                                        <div class="col-md text-center"><p>Atau</p></div>
+                                        <div class="col-md"><hr></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md text-center">
+                                            <p style="color: #00447A;">Kamu belum punya akun? Silahkan <a href="kategori-akun.html">daftar di sini</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="js/stisla.js"></script>
+
+    <!-- JS Libraies -->
+    <script src="node_modules/simpleweather/jquery.simpleWeather.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="node_modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="node_modules/summernote/dist/summernote-bs4.js"></script>
+    <script src="node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+
+    <!-- Template JS File -->
+    <script src="js/scripts.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- Page Specific JS File -->
+    <script src="js/page/index-0.js"></script>
+</body>
+</html>

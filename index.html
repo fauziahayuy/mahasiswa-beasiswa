@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Dashboard &mdash; Beasiswa Kaltim</title>
+  <link rel="icon" href="img/logo/logo_disdik.png">
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="node_modules/prismjs/themes/prism.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <style>
+    body::-webkit-scrollbar{
+    display: none;
+  }
+
+  </style>
+</head>
+
+<body class="layout-3">
+  <div id="app">
+    <div class="main-wrapper container">
+      <div class="navbar-bg-1"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <a class="navbar-brand text-bkt font-weight-bold" href="#">
+            <img src="img/logo/logo_bkt.png" height="30" class="d-inline-block align-top" alt="">
+            Beasiswa Kaltim
+        </a>
+    
+        <form class="form-inline ml-auto">
+          <ul class="navbar-nav">
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+          </ul>
+          
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Novita</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-title">Selamat Datang</div>
+              <a href="account-settings.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Account Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-secondary navbar-expand-lg">
+        <div class="container">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a href="#" class="nav-link"><i class="fas fa-pen-to-square"></i><span>Edit Data Beasiswa</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link disabled"><i class="fas fa-chevron-right"></i><span></span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-square-check"></i><span>Data Final Beasiswa</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Silahkan melengkapi data beasiswa anda!</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+              <div class="breadcrumb-item"><a href="#">Edit Data</a></div>
+            </div>
+          </div>
+
+          <div class="section-body">
+            <a href="#" class="btn btn-icon icon-left btn-primary btn-lg mb-3"><i class="fas fa-save"></i> SAVE PERMANENT</a>
+            <div class="card">
+              <div class="card-header bg-primary text-white">
+                  <h5>Informasi Data Pendaftaran</h5>
+              </div>
+              <div class="card-body">
+                  <div class="row">
+                    <div class="col-md">
+                      <p style="margin-bottom: 0px;">ID PENDAFTARAN:</p>
+                      <p class="font-weight-bold">MS2023039554</p>
+                    </div>
+                    <div class="col-md">
+                      <p style="margin-bottom: 0px;">Jenis Beasiswa:</p>
+                      <p class="font-weight-bold">STIMULAN</p>
+                    </div>
+                    <div class="col-md">
+                      <p style="margin-bottom: 0px;">Kategori Beasiswa:</p>
+                      <p class="font-weight-bold">TUGAS-AKHIR</p>
+                    </div>
+                    <div class="col-md">
+                      <p style="margin-bottom: 0px;">Pilihan Beasiswa:</p>
+                      <p class="font-weight-bold">SKRIPSI</p>
+                    </div>
+                    <div class="col-md">
+                      <p style="margin-bottom: 0px;">Status:</p>
+                      <strong>
+                          <span class="badge bg-danger text-white">BELUM MELENGKAPI BERKAS</span>
+                      </strong>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-header justify-content-center">
+                    <img src="img/avatar/pasfoto.jfif" alt="" width="150" class="rounded">
+                  </div>
+                  <div class="card-body">
+                    <ul class="nav nav-pills flex-column" id="myTab4" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="info-tab" data-toggle="tab" href="#informasi" role="tab" aria-controls="home" aria-selected="true">Informasi Pribadi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="dokumen-tab" data-toggle="tab" href="#dokumen" role="tab" aria-controls="profile" aria-selected="false">Upload Dokumen</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="kontak-tab" data-toggle="tab" href="#kontak-pribadi" role="tab" aria-controls="contact" aria-selected="false">Kontak Pribadi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="wali-tab" data-toggle="tab" href="#wali" role="tab" aria-controls="wali" aria-selected="false">Orang Tua/Wali</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pendidikan-tab" data-toggle="tab" href="#pendidikan" role="tab" aria-controls="pendidikan" aria-selected="false">Pendidikan Tinggi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="bank-tab" data-toggle="tab" href="#bank" role="tab" aria-controls="bank" aria-selected="false">Data Bank</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md"> 
+                <div class="tab-content no-padding" id="myTab2Content">
+                  <div class="tab-pane fade show active" id="informasi" role="tabpanel" aria-labelledby="info-tab">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Informasi Pribadi</h5>
+                      </div>
+                      <div class="card-body">
+                        <div class="alert alert-info font-weight-bold">
+                            Pastikan data pribadi benar untuk mempermudah proses pendaftaran
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="name">Nama <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="text" class="form-control text-uppercase" id="name" value="NOVITA INDRAWATI" placeholder="Masukkan Nama Anda">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="nik">NIK <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="number" class="form-control" id="nik" value="6474036111990006" placeholder="Masukkan NIK Anda">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="nokk">No. KK <span class="required text-danger font-weight-bold">*</span></label>
+                              <input type="number" class="form-control" id="nokk" value="6474031303070101" placeholder="Masukkan No. KK Anda">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="gender">Jenis Kelamin <span class="required text-danger font-weight-bold">*</span></label>
+                              <div class="dropdown">
+                                <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                  -- Pilih Jenis Kelamin --
+                                </button>
+                                <div class="dropdown-menu btn-block">
+                                  <a class="dropdown-item" href="#">Laki-laki</a>
+                                  <a class="dropdown-item" href="#">Perempuan</a>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="tempat_lahir">Tempat Lahir <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="text" class="form-control" id="tempat_lahir" value="Bontang" placeholder="Masukkan Tempat Lahir Anda">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="tanggal_lahir">Tanggal Lahir <span class="required text-danger font-weight-bold">*</span></label>
+                              <input class="form-control" id="date" name="date" type="date"/>
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="agama">Agama <span class="required text-danger font-weight-bold">*</span></label>
+                              <div class="dropdown">
+                                <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                  -- Pilih Agama --
+                                </button>
+                                <div class="dropdown-menu btn-block">
+                                  <a class="dropdown-item" href="#">Islam</a>
+                                  <a class="dropdown-item" href="#">Kristen Protestan</a>
+                                  <a class="dropdown-item" href="#">Kristen Katolik</a>
+                                  <a class="dropdown-item" href="#">Hindu</a>
+                                  <a class="dropdown-item" href="#">Budha</a>
+                                  <a class="dropdown-item" href="#">Konghucu</a>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="pekerjaan">Pekerjaan <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="dropdown">
+                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                -- Pilih Pekerjaan --
+                              </button>
+                              <div class="dropdown-menu btn-block">
+                                <a class="dropdown-item" href="#">Mahasiswa</a>
+                                <a class="dropdown-item" href="#">Pegawai Negeri Sipil (PNS)</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="satuan_kerja">Ganti Avatar</label>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="customFile">
+                              <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                            <small class="text-muted">
+                              Size: 3x4 cm
+                            </small>
+                          </div>
+                        </div>
+                        <small class="font-italic text-danger font-weight-bold">(*) Data Wajib Diisi</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="dokumen" role="tabpanel" aria-labelledby="dokumen-tab">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Upload Dokumen</h5>
+                      </div>
+                    </div>
+                    <div class="alert alert-info font-weight-bold">
+                      Pastikan melengkapi Dokumen untuk mempermudah proses pendaftaran
+                    </div>
+
+                    <!-- Surat Pernyataan -->
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="section-title">Surat Pernyataan <span class="required text-danger font-weight-bold">*</span></div>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <ol>
+                          <li>Surat Pernyataan dapat di download pada <a href="#">laman berikut</a></li>
+                          <li>Scan atau foto ktp yang diupload tidak terpotong</li>
+                        </ol>
+                        <div class="row d-flex align-items-center">
+                          <div class="col-md-10 d-flex justify-content-end mb-2">
+                            <div class="custom-file">
+                              <input type="file" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-end mb-2">
+                            <a href="#" class="btn btn-outline-primary rounded-pill">Upload</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- KTP -->
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="section-title">Kartu Tanda Penduduk <span class="required text-danger font-weight-bold">*</span></div>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <ol>
+                          <li>KTP asli yang masih berlaku</li>
+                          <li>KTP berasal dari Kalimantan Timur</li>
+                          <li>Scan atau foto KTP asli yang diupload tidak terpotong</li>
+                        </ol>
+                        <div class="row d-flex align-items-center">
+                          <div class="col-md-10 d-flex justify-content-end mb-2">
+                            <div class="custom-file">
+                              <input type="file" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-end mb-2">
+                            <a href="#" class="btn btn-outline-primary rounded-pill">Upload</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- KK -->
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="section-title">Kartu Keluarga <span class="required text-danger font-weight-bold">*</span></div>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <ol>
+                          <li>KK asli yang masih berlaku</li>
+                          <li>KK berasal dari Kalimantan Timur</li>
+                          <li>Scan atau foto KK asli yang diupload tidak terpotong</li>
+                        </ol>
+                        <div class="row d-flex align-items-center">
+                          <div class="col-md-10 d-flex justify-content-end mb-2">
+                            <div class="custom-file">
+                              <input type="file" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-end mb-2">
+                            <a href="#" class="btn btn-outline-primary rounded-pill">Upload</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- KTM -->
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="section-title">Kartu Tanda Mahasiswa <span class="required text-danger font-weight-bold">*</span></div>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <ol>
+                          <li>Scan atau foto KTM asli yang diupload tidak terpotong</li>
+                        </ol>
+                        <div class="row d-flex align-items-center">
+                          <div class="col-md-10 d-flex justify-content-end mb-2">
+                            <div class="custom-file">
+                              <input type="file" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-end mb-2">
+                            <a href="#" class="btn btn-outline-primary rounded-pill">Upload</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Surat Aktif Kuliah -->
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="section-title">Surat Aktif Kuliah <span class="required text-danger font-weight-bold">*</span></div>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <ol>
+                          <li>Surat Aktif Kuliah terbaru</li>
+                          <li>Scan atau foto Surat Aktif Kuliah yang diupload tidak terpotong</li>
+                        </ol>
+                        <div class="row d-flex align-items-center">
+                          <div class="col-md-10 d-flex justify-content-end mb-2">
+                            <div class="custom-file">
+                              <input type="file" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-end mb-2">
+                            <a href="#" class="btn btn-outline-primary rounded-pill">Upload</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Transkrip Nilai Akademik -->
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="section-title">Transkrip Nilai Akademik <span class="required text-danger font-weight-bold">*</span></div>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <ol>
+                          <li>Transkrip Nilai Akademik terbaru dengan nilai IPK</li>
+                          <li>Scan atau foto Transkrip Nilai Akademik yang diupload tidak terpotong</li>
+                        </ol>
+                        <div class="row d-flex align-items-center">
+                          <div class="col-md-10 d-flex justify-content-end mb-2">
+                            <div class="custom-file">
+                              <input type="file" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-end mb-2">
+                            <a href="#" class="btn btn-outline-primary rounded-pill">Upload</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- KRS -->
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="section-title">Kartu Rencana Studi <span class="required text-danger font-weight-bold">*</span></div>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <ol>
+                          <li>KRS terbaru</li>
+                          <li>Scan atau foto KRS yang diupload tidak terpotong</li>
+                        </ol>
+                        <div class="row d-flex align-items-center">
+                          <div class="col-md-10 d-flex justify-content-end mb-2">
+                            <div class="custom-file">
+                              <input type="file" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-end mb-2">
+                            <a href="#" class="btn btn-outline-primary rounded-pill">Upload</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- UKT -->
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="section-title">Kwitansi UKT / SPP <span class="required text-danger font-weight-bold">*</span></div>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <ol>
+                          <li>Kwitansi UKT / SPP terbaru</li>
+                          <li>Scan atau foto Kwitansi UKT / SPP yang diupload tidak terpotong</li>
+                        </ol>
+                        <div class="row d-flex align-items-center">
+                          <div class="col-md-10 d-flex justify-content-end mb-2">
+                            <div class="custom-file">
+                              <input type="file" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-end mb-2">
+                            <a href="#" class="btn btn-outline-primary rounded-pill">Upload</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Tugas Akhir -->
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="section-title">Surat Keterangan TUGAS-AKHIR SKRIPSI <span class="required text-danger font-weight-bold">*</span></div>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <ol>
+                          <li>Scan atau foto Surat Keterangan TUGAS-AKHIR SKRIPSI yang diupload tidak terpotong</li>
+                        </ol>
+                        <div class="row d-flex align-items-center">
+                          <div class="col-md-10 d-flex justify-content-end mb-2">
+                            <div class="custom-file">
+                              <input type="file" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-end mb-2">
+                            <a href="#" class="btn btn-outline-primary rounded-pill">Upload</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane fade" id="kontak-pribadi" role="tabpanel" aria-labelledby="kontak-tab">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Kontak Pribadi</h5>
+                      </div>
+                      <div class="card-body">
+                        <div class="alert alert-info font-weight-bold">
+                            Pastikan data kontak pribadi benar untuk mempermudah proses pendaftaran
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="kabkot">Kabupaten/Kota <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="dropdown">
+                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                -- Pilih Kabupaten/Kota --
+                              </button>
+                              <div class="dropdown-menu btn-block">
+                                <a class="dropdown-item" href="#">Kabupaten Berau</a>
+                                <a class="dropdown-item" href="#">Kabupaten Kutai Barat</a>
+                                <a class="dropdown-item" href="#">Kabupaten Kutai Kartanegara</a>
+                                <a class="dropdown-item" href="#">Kabupaten Kutai Timur</a>
+                                <a class="dropdown-item" href="#">Kabupaten Mahakam Ulu</a>
+                                <a class="dropdown-item" href="#">Kabupaten Paser</a>
+                                <a class="dropdown-item" href="#">Kabupaten PPU</a>
+                                <a class="dropdown-item" href="#">Kota Balikpapan</a>
+                                <a class="dropdown-item" href="#">Kota Bontang</a>
+                                <a class="dropdown-item" href="#">Kota Samarinda</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="kecamatan">Kecamatan <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="dropdown">
+                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                -- Pilih Kecamatan --
+                              </button>
+                              <div class="dropdown-menu btn-block">
+                                <a class="dropdown-item" href="#">Samarinda Utara</a>
+                                <a class="dropdown-item" href="#">Samarinda Ulu</a>
+                                <a class="dropdown-item" href="#">Samarinda Kota</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="kelurahan">Kelurahan/Desa <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="dropdown">
+                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                -- Pilih Kelurahan/Desa --
+                              </button>
+                              <div class="dropdown-menu btn-block">
+                                <a class="dropdown-item" href="#">Sempaja Selatan</a>
+                                <a class="dropdown-item" href="#">Sungai Pinang</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="alamat" class="form-label">Alamat Lengkap <span class="required text-danger font-weight-bold">*</span></label>
+                            <textarea class="form-control" name="alamat" id="alamat" rows="3" value="Jl. Cipto mangunkusumo RT 42 No 01 Bontang Barat" placeholder="Masukkan Alamat Lengkap Anda"></textarea>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="kode_pos">Kode Pos <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="number" class="form-control" id="kode_pos" value="75313" placeholder="Masukkan Kode Pos Anda">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="no_hp">Nomor Handphone <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="number" class="form-control" id="no_hp" value="081255559642" placeholder="Masukkan Nomor Handphone Anda">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="email">Email <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="email" class="form-control" id="email" value="Novitaindrawati021@gmail.com" placeholder="Masukkan Email Anda">
+                          </div>
+                        </div>
+                        <small class="font-italic text-danger font-weight-bold">(*) Data Wajib Diisi</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="wali" role="tabpanel" aria-labelledby="wali-tab">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Orang Tua/Wali</h5>
+                      </div>
+                      <div class="card-body">
+                        <div class="alert alert-info font-weight-bold">
+                          Pastikan data Orang Tua/Wali benar untuk mempermudah proses pendaftaran
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="nama_ibu">Nama Ibu <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="text" class="form-control text-uppercase" id="name" value="Warniti Lydiawati" placeholder="Masukkan Nama Ibu Anda">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pendidikan" role="tabpanel" aria-labelledby="pendidikan-tab">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Pendidikan Tinggi</h5>
+                      </div>
+                      <div class="card-body">
+                        <div class="alert alert-info font-weight-bold">
+                          Pastikan data Pendidikan Tinggi benar untuk mempermudah proses pendaftaran
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="nim">NIM <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="number" class="form-control text-uppercase" id="name" value="1805125042" placeholder="Masukkan NIM Anda">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="strata">Strata <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="dropdown">
+                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                -- Pilih Strata --
+                              </button>
+                              <div class="dropdown-menu btn-block">
+                                <a class="dropdown-item" href="#">D1</a>
+                                <a class="dropdown-item" href="#">D2</a>
+                                <a class="dropdown-item" href="#">D3</a>
+                                <a class="dropdown-item" href="#">D4</a>
+                                <a class="dropdown-item" href="#">S1</a>
+                                <a class="dropdown-item" href="#">S2</a>
+                                <a class="dropdown-item" href="#">S3</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="semester">Semester <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="dropdown">
+                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                -- Pilih Semester --
+                              </button>
+                              <div class="dropdown-menu btn-block">
+                                <a class="dropdown-item" href="#">2</a>
+                                <a class="dropdown-item" href="#">3</a>
+                                <a class="dropdown-item" href="#">4</a>
+                                <a class="dropdown-item" href="#">5</a>
+                                <a class="dropdown-item" href="#">6</a>
+                                <a class="dropdown-item" href="#">7</a>
+                                <a class="dropdown-item" href="#">8</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="pt">Perguruan Tinggi <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="dropdown">
+                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                -- Pilih Perguruan Tinggi --
+                              </button>
+                              <div class="dropdown-menu btn-block">
+                                <a class="dropdown-item" href="#">Universitas Mulawarman - B</a>
+                                <a class="dropdown-item" href="#">Politeknik Negeri Samarinda - B</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="prodi">Program Studi <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="dropdown">
+                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                -- Pilih Program Studi --
+                              </button>
+                              <div class="dropdown-menu btn-block">
+                                <a class="dropdown-item" href="#">Teknik Informatika - B</a>
+                                <a class="dropdown-item" href="#">Kedokteran - A</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="ukt">Biaya SPP Tetap/UKT <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text bg-primary text-white">Rp</span>
+                              </div>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="ukt">Biaya Variabel / SKS <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text bg-primary text-white">Rp</span>
+                              </div>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="ukt">Biaya Variabel / SKS <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text bg-primary text-white">Rp</span>
+                              </div>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="ukt">Biaya Registrasi Ulang/Herregistrasi <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text bg-primary text-white">Rp</span>
+                              </div>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="ipk">IPK <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="number" class="form-control" id="no_hp" placeholder="Masukkan Nilai Indeks Prestasi Anda">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="bank" role="tabpanel" aria-labelledby="bank-tab">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Data Bank</h5>
+                      </div>
+                      <div class="card-body">
+                        <div class="alert alert-info font-weight-bold">
+                          Pastikan data Bank benar untuk mempermudah proses pendaftaran
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="nama_bank">Nama Bank <span class="required text-danger font-weight-bold">*</span></label>
+                            <div class="dropdown">
+                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                -- Pilih Nama Bank --
+                              </button>
+                              <div class="dropdown-menu btn-block">
+                                <a class="dropdown-item" href="#">BRI</a>
+                                <a class="dropdown-item" href="#">BTN</a>
+                                <a class="dropdown-item" href="#">BNI</a>
+                                <a class="dropdown-item" href="#">BSI</a>
+                                <a class="dropdown-item" href="#">MANDIRI</a>
+                                <a class="dropdown-item" href="#">KALTIMTARA</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="nama_rekening">Nama Pemilik Rekening <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="text" class="form-control" id="nama_bank" value="Novita Indrawati" placeholder="Masukkan Nama Pemilik Rekening">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="no_rekening">NOMOR REKENING <span class="required text-danger font-weight-bold">*</span></label>
+                            <input type="number" class="form-control" id="no_rekening" value="0087524396" placeholder="Masukkan Nomor Rekening Anda">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-danger">Data Final Beasiswa Tidak Dapat Diakses</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Harap menyelesaikan (SAVE PERMANENT) pengisian form pendaftaran untuk mengakses halaman <strong>Data Final Beasiswa</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2023 <div class="bullet"></div> Dinas Pendidikan dan Kebudayaan Provinsi Kalimantan Timur
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+  <script src="https://kit.fontawesome.com/39f6e58ccc.js" crossorigin="anonymous"></script>
+  <script src="node_modules/prismjs/prism.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="js/page/bootstrap-modal.js"></script>
+
+  <!-- Template JS File -->
+  <script src="js/scripts.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
