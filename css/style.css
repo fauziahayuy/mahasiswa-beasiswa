@@ -1896,7 +1896,11 @@ h6 .badge {
   width: 100%;
   height: 115px;
   z-index: -1;
-  background-color: #1AD4FF;
+  background-color: #E5FAFF;
+}
+
+.dropdown-toggle::after{
+  color: #0091B2 !important;
 }
 
 .text-bkt{

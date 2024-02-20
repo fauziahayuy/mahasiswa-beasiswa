@@ -10,6 +10,16 @@ body::-webkit-scrollbar{
     display: none;
 }
 
+/* Navbar */
+.navbar-bg-1 {
+    background-color: #E5FAFF;
+  }
+  
+  .text-bkt{
+    color: #0091B2 !important;
+  }
+/* Navbar */
+
 /* Form Tuntas - PA */
 .card-form-tuntas label{
     font-weight: bold !important;
