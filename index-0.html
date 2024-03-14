@@ -81,7 +81,7 @@
           </div>
 
           <div class="section-body">
-            <a href="#" class="btn btn-icon icon-left btn-primary btn-lg mb-3"><i class="fas fa-save"></i> SAVE PERMANENT</a>
+            <form class="needs-validation" novalidate>
             <div class="card">
               <div class="card-header bg-primary text-white">
                   <h5>Informasi Data Pendaftaran</h5>
@@ -139,6 +139,7 @@
                       <li class="nav-item">
                         <a class="nav-link" id="bank-tab" data-toggle="tab" href="#bank" role="tab" aria-controls="bank" aria-selected="false">Data Bank</a>
                       </li>
+                      <button class="btn btn-primary shadow mt-3" type="submit"><i class="fas fa-save"></i> SAVE PERMANENT</button>
                     </ul>
                   </div>
                 </div>
@@ -154,82 +155,70 @@
                         <div class="alert alert-info font-weight-bold">
                             Pastikan data pribadi benar untuk mempermudah proses pendaftaran
                         </div>
-                        <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="name">Nama <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="text" class="form-control text-uppercase" id="name" value="NOVITA INDRAWATI" placeholder="Masukkan Nama Anda">
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label for="nik">NIK <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="number" class="form-control" id="nik" value="6474036111990006" placeholder="Masukkan NIK Anda">
-                          </div>
-                          <div class="form-group col-md-6">
-                              <label for="nokk">No. KK <span class="required text-danger font-weight-bold">*</span></label>
-                              <input type="number" class="form-control" id="nokk" value="6474031303070101" placeholder="Masukkan No. KK Anda">
-                          </div>
-                          <div class="form-group col-md-6">
-                              <label for="gender">Jenis Kelamin <span class="required text-danger font-weight-bold">*</span></label>
-                              <div class="dropdown">
-                                <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                  -- Pilih Jenis Kelamin --
-                                </button>
-                                <div class="dropdown-menu btn-block">
-                                  <a class="dropdown-item" href="#">Laki-laki</a>
-                                  <a class="dropdown-item" href="#">Perempuan</a>
-                                </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="name">Nama <span class="required text-danger font-weight-bold">*</span></label>
+                              <input type="text" class="form-control text-uppercase" id="name" value="NOVITA INDRAWATI" placeholder="Masukkan Nama Anda" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="nik">NIK <span class="required text-danger font-weight-bold">*</span></label>
+                              <input type="number" class="form-control" id="nik" value="6474036111990006" placeholder="Masukkan NIK Anda">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="nokk">No. KK <span class="required text-danger font-weight-bold">*</span></label>
+                                <input type="number" class="form-control" id="nokk" value="6474031303070101" placeholder="Masukkan No. KK Anda">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="form-gender">Jenis Kelamin <span class="required text-danger font-weight-bold">*</span></label>
+                                <select class="custom-select" id="gender" required>
+                                  <option selected disabled value="">Pilih Jenis Kelamin...</option>
+                                  <option>Laki-laki</option>
+                                  <option>Perempuan</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="tempat_lahir">Tempat Lahir <span class="required text-danger font-weight-bold">*</span></label>
+                              <input type="text" class="form-control" id="tempat_lahir" value="Bontang" placeholder="Masukkan Tempat Lahir Anda">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="tanggal_lahir">Tanggal Lahir <span class="required text-danger font-weight-bold">*</span></label>
+                                <input class="form-control" id="date" name="date" type="date"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="form-agama">Agama <span class="required text-danger font-weight-bold">*</span></label>
+                              <select class="form-control" id="agama" required>
+                                <option selected disabled value="">Pilih Agama...</option>
+                                <option>Islam</option>
+                                <option>Kristen</option>
+                                <option>Hindu</option>
+                                <option>Budha</option>
+                                <option>Konghucu</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="form-pekerjaan">Pekerjaan <span class="required text-danger font-weight-bold">*</span></label>
+                              <select class="form-control" id="pekerjaan" required>
+                                <option selected disabled value="">Pilih Pekerjaan...</option>
+                                <option>Mahasiswa</option>
+                                <option>Pegawai Negeri Sipil (PNS)</option>
+                                <option>Karyawan Swasta</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="satuan_kerja">Ganti Avatar <span class="required text-danger font-weight-bold">*</span></label>
+                              <div class="custom-file">
+                                <input type="file" class="form-control">
                               </div>
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label for="tempat_lahir">Tempat Lahir <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="text" class="form-control" id="tempat_lahir" value="Bontang" placeholder="Masukkan Tempat Lahir Anda">
-                          </div>
-                          <div class="form-group col-md-6">
-                              <label for="tanggal_lahir">Tanggal Lahir <span class="required text-danger font-weight-bold">*</span></label>
-                              <input class="form-control" id="date" name="date" type="date"/>
-                          </div>
-                          <div class="form-group col-md-6">
-                              <label for="agama">Agama <span class="required text-danger font-weight-bold">*</span></label>
-                              <div class="dropdown">
-                                <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                  -- Pilih Agama --
-                                </button>
-                                <div class="dropdown-menu btn-block">
-                                  <a class="dropdown-item" href="#">Islam</a>
-                                  <a class="dropdown-item" href="#">Kristen Protestan</a>
-                                  <a class="dropdown-item" href="#">Kristen Katolik</a>
-                                  <a class="dropdown-item" href="#">Hindu</a>
-                                  <a class="dropdown-item" href="#">Budha</a>
-                                  <a class="dropdown-item" href="#">Konghucu</a>
-                                </div>
-                              </div>
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label for="pekerjaan">Pekerjaan <span class="required text-danger font-weight-bold">*</span></label>
-                            <div class="dropdown">
-                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                -- Pilih Pekerjaan --
-                              </button>
-                              <div class="dropdown-menu btn-block">
-                                <a class="dropdown-item" href="#">Mahasiswa</a>
-                                <a class="dropdown-item" href="#">Pegawai Negeri Sipil (PNS)</a>
-                              </div>
+                              <small class="text-muted">
+                                Size: 3x4 cm
+                              </small>
                             </div>
                           </div>
-                          <div class="form-group col-md-6">
-                            <label for="satuan_kerja">Ganti Avatar</label>
-                            <div class="custom-file">
-                              <input type="file" class="custom-file-input" id="customFile">
-                              <label class="custom-file-label" for="customFile">Choose file</label>
-                            </div>
-                            <small class="text-muted">
-                              Size: 3x4 cm
-                            </small>
-                          </div>
-                        </div>
                         <small class="font-italic text-danger font-weight-bold">(*) Data Wajib Diisi</small>
                       </div>
                     </div>
                   </div>
+
                   <div class="tab-pane fade" id="dokumen" role="tabpanel" aria-labelledby="dokumen-tab">
                     <div class="card">
                       <div class="card-header">
@@ -439,6 +428,7 @@
                     </div>
 
                   </div>
+
                   <div class="tab-pane fade" id="kontak-pribadi" role="tabpanel" aria-labelledby="kontak-tab">
                     <div class="card">
                       <div class="card-header">
@@ -450,53 +440,41 @@
                         </div>
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="kabkot">Kabupaten/Kota <span class="required text-danger font-weight-bold">*</span></label>
-                            <div class="dropdown">
-                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                -- Pilih Kabupaten/Kota --
-                              </button>
-                              <div class="dropdown-menu btn-block">
-                                <a class="dropdown-item" href="#">Kabupaten Berau</a>
-                                <a class="dropdown-item" href="#">Kabupaten Kutai Barat</a>
-                                <a class="dropdown-item" href="#">Kabupaten Kutai Kartanegara</a>
-                                <a class="dropdown-item" href="#">Kabupaten Kutai Timur</a>
-                                <a class="dropdown-item" href="#">Kabupaten Mahakam Ulu</a>
-                                <a class="dropdown-item" href="#">Kabupaten Paser</a>
-                                <a class="dropdown-item" href="#">Kabupaten PPU</a>
-                                <a class="dropdown-item" href="#">Kota Balikpapan</a>
-                                <a class="dropdown-item" href="#">Kota Bontang</a>
-                                <a class="dropdown-item" href="#">Kota Samarinda</a>
-                              </div>
-                            </div>
+                            <label for="form-kabkot">Kabupaten/Kota <span class="required text-danger font-weight-bold">*</span></label>
+                              <select class="form-control" id="kabkot" required>
+                                <option selected disabled value="">Pilih Kabupaten/Kota...</option>
+                                <option>Kabupaten Berau</option>
+                                <option>Kabupaten Kutai Barat</option>
+                                <option>Kabupaten Kutai Kartanegara</option>
+                                <option>Kabupaten Kutai Timur</option>
+                                <option>Kabupaten Mahakam Ulu</option>
+                                <option>Kabupaten Paser</option>
+                                <option>Kabupaten PPU</option>
+                                <option>Kota Balikpapan</option>
+                                <option>Kota Bontang</option>
+                                <option>Kota Samarinda</option>
+                              </select>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="kecamatan">Kecamatan <span class="required text-danger font-weight-bold">*</span></label>
-                            <div class="dropdown">
-                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                -- Pilih Kecamatan --
-                              </button>
-                              <div class="dropdown-menu btn-block">
-                                <a class="dropdown-item" href="#">Samarinda Utara</a>
-                                <a class="dropdown-item" href="#">Samarinda Ulu</a>
-                                <a class="dropdown-item" href="#">Samarinda Kota</a>
-                              </div>
-                            </div>
+                            <label for="form-kecamatan">Kecamatan <span class="required text-danger font-weight-bold">*</span></label>
+                              <select class="form-control" id="kecamatan" required>
+                                <option selected disabled value="">Pilih Kecamatan...</option>
+                                <option>Samarinda Utara</option>
+                                <option>Samarinda Ulu</option>
+                                <option>Samarinda Kota</option>
+                              </select>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="kelurahan">Kelurahan/Desa <span class="required text-danger font-weight-bold">*</span></label>
-                            <div class="dropdown">
-                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                -- Pilih Kelurahan/Desa --
-                              </button>
-                              <div class="dropdown-menu btn-block">
-                                <a class="dropdown-item" href="#">Sempaja Selatan</a>
-                                <a class="dropdown-item" href="#">Sungai Pinang</a>
-                              </div>
-                            </div>
+                            <label for="form-kelurahan">Kelurahan <span class="required text-danger font-weight-bold">*</span></label>
+                              <select class="form-control" id="kelurahan" required>
+                                <option selected disabled value="">Pilih Kelurahan...</option>
+                                <option>Sempaja Selatan</option>
+                                <option>Sungai Pinang</option>
+                              </select>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="alamat" class="form-label">Alamat Lengkap <span class="required text-danger font-weight-bold">*</span></label>
-                            <textarea class="form-control" name="alamat" id="alamat" rows="3" value="Jl. Cipto mangunkusumo RT 42 No 01 Bontang Barat" placeholder="Masukkan Alamat Lengkap Anda"></textarea>
+                            <textarea class="form-control" name="alamat" id="alamat" rows="3" value="Jl. Cipto mangunkusumo RT 42 No 01 Bontang Barat" placeholder="Masukkan Alamat Lengkap Anda" style="height: 100px;"></textarea>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="kode_pos">Kode Pos <span class="required text-danger font-weight-bold">*</span></label>
@@ -515,6 +493,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="tab-pane fade" id="wali" role="tabpanel" aria-labelledby="wali-tab">
                     <div class="card">
                       <div class="card-header">
@@ -533,6 +512,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="tab-pane fade" id="pendidikan" role="tabpanel" aria-labelledby="pendidikan-tab">
                     <div class="card">
                       <div class="card-header">
@@ -548,62 +528,47 @@
                             <input type="number" class="form-control text-uppercase" id="name" value="1805125042" placeholder="Masukkan NIM Anda">
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="strata">Strata <span class="required text-danger font-weight-bold">*</span></label>
-                            <div class="dropdown">
-                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                -- Pilih Strata --
-                              </button>
-                              <div class="dropdown-menu btn-block">
-                                <a class="dropdown-item" href="#">D1</a>
-                                <a class="dropdown-item" href="#">D2</a>
-                                <a class="dropdown-item" href="#">D3</a>
-                                <a class="dropdown-item" href="#">D4</a>
-                                <a class="dropdown-item" href="#">S1</a>
-                                <a class="dropdown-item" href="#">S2</a>
-                                <a class="dropdown-item" href="#">S3</a>
-                              </div>
-                            </div>
+                            <label for="form-strata">Strata <span class="required text-danger font-weight-bold">*</span></label>
+                              <select class="form-control" id="strata" required>
+                                <option selected disabled value="">Pilih Strata...</option>
+                                <option>D1</option>
+                                <option>D2</option>
+                                <option>D3</option>
+                                <option>D4</option>
+                                <option>S1</option>
+                                <option>S2</option>
+                                <option>S3</option>
+                              </select>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="semester">Semester <span class="required text-danger font-weight-bold">*</span></label>
-                            <div class="dropdown">
-                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                -- Pilih Semester --
-                              </button>
-                              <div class="dropdown-menu btn-block">
-                                <a class="dropdown-item" href="#">2</a>
-                                <a class="dropdown-item" href="#">3</a>
-                                <a class="dropdown-item" href="#">4</a>
-                                <a class="dropdown-item" href="#">5</a>
-                                <a class="dropdown-item" href="#">6</a>
-                                <a class="dropdown-item" href="#">7</a>
-                                <a class="dropdown-item" href="#">8</a>
-                              </div>
-                            </div>
+                            <label for="form-smt">Semester <span class="required text-danger font-weight-bold">*</span></label>
+                              <select class="form-control" id="smt" required>
+                                <option selected disabled value="">Pilih Semester...</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                              </select>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="pt">Perguruan Tinggi <span class="required text-danger font-weight-bold">*</span></label>
-                            <div class="dropdown">
-                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                -- Pilih Perguruan Tinggi --
-                              </button>
-                              <div class="dropdown-menu btn-block">
-                                <a class="dropdown-item" href="#">Universitas Mulawarman - B</a>
-                                <a class="dropdown-item" href="#">Politeknik Negeri Samarinda - B</a>
-                              </div>
-                            </div>
+                            <label for="form-univ">Perguruan Tinggi <span class="required text-danger font-weight-bold">*</span></label>
+                              <select class="form-control" id="univ" required>
+                                <option selected disabled value="">Pilih Perguruan Tinggi...</option>
+                                <option>Universitas Mulawarman - B</option>
+                                <option>Politeknik Negeri Samarinda - B</option>
+                              </select>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="prodi">Program Studi <span class="required text-danger font-weight-bold">*</span></label>
-                            <div class="dropdown">
-                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                -- Pilih Program Studi --
-                              </button>
-                              <div class="dropdown-menu btn-block">
-                                <a class="dropdown-item" href="#">Teknik Informatika - B</a>
-                                <a class="dropdown-item" href="#">Kedokteran - A</a>
-                              </div>
-                            </div>
+                            <label for="form-prodi">Program Studi <span class="required text-danger font-weight-bold">*</span></label>
+                              <select class="form-control" id="prodi" required>
+                                <option selected disabled value="">Pilih Program Studi...</option>
+                                <option>Teknik Informatika - B</option>
+                                <option>Kedokteran - A</option>
+                              </select>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="ukt">Biaya SPP Tetap/UKT <span class="required text-danger font-weight-bold">*</span></label>
@@ -660,20 +625,16 @@
                         </div>
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="nama_bank">Nama Bank <span class="required text-danger font-weight-bold">*</span></label>
-                            <div class="dropdown">
-                              <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                -- Pilih Nama Bank --
-                              </button>
-                              <div class="dropdown-menu btn-block">
-                                <a class="dropdown-item" href="#">BRI</a>
-                                <a class="dropdown-item" href="#">BTN</a>
-                                <a class="dropdown-item" href="#">BNI</a>
-                                <a class="dropdown-item" href="#">BSI</a>
-                                <a class="dropdown-item" href="#">MANDIRI</a>
-                                <a class="dropdown-item" href="#">KALTIMTARA</a>
-                              </div>
-                            </div>
+                            <label for="form-bank">Nama Bank <span class="required text-danger font-weight-bold">*</span></label>
+                              <select class="form-control" id="nama_bank" required>
+                                <option selected disabled value="">Pilih Nama Bank...</option>
+                                <option>BRI</option>
+                                <option>BTN</option>
+                                <option>BNI</option>
+                                <option>BSI</option>
+                                <option>MANDIRI</option>
+                                <option>KALTIMTARA</option>
+                              </select>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="nama_rekening">Nama Pemilik Rekening <span class="required text-danger font-weight-bold">*</span></label>
@@ -690,7 +651,8 @@
                 </div>
               </div>
             </div>
-          </div>
+        </form>  
+        </div>
         </section>
       </div>
 
@@ -736,5 +698,26 @@
   <!-- Template JS File -->
   <script src="js/scripts.js"></script>
   <script src="js/custom.js"></script>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
 </body>
 </html>
