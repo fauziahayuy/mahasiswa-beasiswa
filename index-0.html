@@ -178,11 +178,11 @@
                             </div>
                             <div class="form-group col-md-6">
                               <label for="tempat_lahir">Tempat Lahir <span class="required text-danger font-weight-bold">*</span></label>
-                              <input type="text" class="form-control" id="tempat_lahir" value="Bontang" placeholder="Masukkan Tempat Lahir Anda">
+                              <input type="text" class="form-control" id="tempat_lahir" value="Bontang" placeholder="Masukkan Tempat Lahir Anda" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="tanggal_lahir">Tanggal Lahir <span class="required text-danger font-weight-bold">*</span></label>
-                                <input class="form-control" id="date" name="date" type="date"/>
+                                <input class="form-control" id="date" name="date" type="date" required/>
                             </div>
                             <div class="form-group col-md-6">
                               <label for="form-agama">Agama <span class="required text-danger font-weight-bold">*</span></label>
@@ -207,10 +207,10 @@
                             <div class="form-group col-md-6">
                               <label for="satuan_kerja">Ganti Avatar <span class="required text-danger font-weight-bold">*</span></label>
                               <div class="custom-file">
-                                <input type="file" class="form-control">
+                                <input type="file" class="form-control" accept=".png, .jpg, .jpeg" required>
                               </div>
                               <small class="text-muted">
-                                Size: 3x4 cm
+                                Format PNG, JPG, atau JPEG
                               </small>
                             </div>
                           </div>
@@ -233,7 +233,7 @@
                     <div class="card">
                       <div class="card-body">
                         <div class="section-title">Surat Pernyataan <span class="required text-danger font-weight-bold">*</span></div>
-                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 5MB</p>
                         <ol>
                           <li>Surat Pernyataan dapat di download pada <a href="#">laman berikut</a></li>
                           <li>Scan atau foto ktp yang diupload tidak terpotong</li>
@@ -241,7 +241,7 @@
                         <div class="row d-flex align-items-center">
                           <div class="col-md-10 d-flex justify-content-end mb-2">
                             <div class="custom-file">
-                              <input type="file" class="form-control">
+                              <input type="file" accept=".pdf" maxlength="5000000" class="form-control" required>
                             </div>
                           </div>
                           <div class="col-md-2 d-flex justify-content-end mb-2">
@@ -255,7 +255,7 @@
                     <div class="card">
                       <div class="card-body">
                         <div class="section-title">Kartu Tanda Penduduk <span class="required text-danger font-weight-bold">*</span></div>
-                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 5MB</p>
                         <ol>
                           <li>KTP asli yang masih berlaku</li>
                           <li>KTP berasal dari Kalimantan Timur</li>
@@ -264,7 +264,7 @@
                         <div class="row d-flex align-items-center">
                           <div class="col-md-10 d-flex justify-content-end mb-2">
                             <div class="custom-file">
-                              <input type="file" class="form-control">
+                              <input type="file" accept=".pdf" maxlength="5000000"  class="form-control" required>
                             </div>
                           </div>
                           <div class="col-md-2 d-flex justify-content-end mb-2">
@@ -278,7 +278,7 @@
                     <div class="card">
                       <div class="card-body">
                         <div class="section-title">Kartu Keluarga <span class="required text-danger font-weight-bold">*</span></div>
-                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 5MB</p>
                         <ol>
                           <li>KK asli yang masih berlaku</li>
                           <li>KK berasal dari Kalimantan Timur</li>
@@ -287,7 +287,7 @@
                         <div class="row d-flex align-items-center">
                           <div class="col-md-10 d-flex justify-content-end mb-2">
                             <div class="custom-file">
-                              <input type="file" class="form-control">
+                              <input type="file" accept=".pdf" maxlength="5000000"  class="form-control" required>
                             </div>
                           </div>
                           <div class="col-md-2 d-flex justify-content-end mb-2">
@@ -301,14 +301,14 @@
                     <div class="card">
                       <div class="card-body">
                         <div class="section-title">Kartu Tanda Mahasiswa <span class="required text-danger font-weight-bold">*</span></div>
-                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 5MB</p>
                         <ol>
                           <li>Scan atau foto KTM asli yang diupload tidak terpotong</li>
                         </ol>
                         <div class="row d-flex align-items-center">
                           <div class="col-md-10 d-flex justify-content-end mb-2">
                             <div class="custom-file">
-                              <input type="file" class="form-control">
+                              <input type="file" accept=".pdf" maxlength="5000000"  class="form-control" required>
                             </div>
                           </div>
                           <div class="col-md-2 d-flex justify-content-end mb-2">
@@ -322,7 +322,7 @@
                     <div class="card">
                       <div class="card-body">
                         <div class="section-title">Surat Aktif Kuliah <span class="required text-danger font-weight-bold">*</span></div>
-                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 5MB</p>
                         <ol>
                           <li>Surat Aktif Kuliah terbaru</li>
                           <li>Scan atau foto Surat Aktif Kuliah yang diupload tidak terpotong</li>
@@ -330,7 +330,7 @@
                         <div class="row d-flex align-items-center">
                           <div class="col-md-10 d-flex justify-content-end mb-2">
                             <div class="custom-file">
-                              <input type="file" class="form-control">
+                              <input type="file" accept=".pdf" maxlength="5000000"  class="form-control" required>
                             </div>
                           </div>
                           <div class="col-md-2 d-flex justify-content-end mb-2">
@@ -344,7 +344,7 @@
                     <div class="card">
                       <div class="card-body">
                         <div class="section-title">Transkrip Nilai Akademik <span class="required text-danger font-weight-bold">*</span></div>
-                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 5MB</p>
                         <ol>
                           <li>Transkrip Nilai Akademik terbaru dengan nilai IPK</li>
                           <li>Scan atau foto Transkrip Nilai Akademik yang diupload tidak terpotong</li>
@@ -352,7 +352,7 @@
                         <div class="row d-flex align-items-center">
                           <div class="col-md-10 d-flex justify-content-end mb-2">
                             <div class="custom-file">
-                              <input type="file" class="form-control">
+                              <input type="file" accept=".pdf" maxlength="5000000"  class="form-control" required>
                             </div>
                           </div>
                           <div class="col-md-2 d-flex justify-content-end mb-2">
@@ -366,7 +366,7 @@
                     <div class="card">
                       <div class="card-body">
                         <div class="section-title">Kartu Rencana Studi <span class="required text-danger font-weight-bold">*</span></div>
-                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 5MB</p>
                         <ol>
                           <li>KRS terbaru</li>
                           <li>Scan atau foto KRS yang diupload tidak terpotong</li>
@@ -374,7 +374,7 @@
                         <div class="row d-flex align-items-center">
                           <div class="col-md-10 d-flex justify-content-end mb-2">
                             <div class="custom-file">
-                              <input type="file" class="form-control">
+                              <input type="file" accept=".pdf" maxlength="5000000"  class="form-control" required>
                             </div>
                           </div>
                           <div class="col-md-2 d-flex justify-content-end mb-2">
@@ -388,7 +388,7 @@
                     <div class="card">
                       <div class="card-body">
                         <div class="section-title">Kwitansi UKT / SPP <span class="required text-danger font-weight-bold">*</span></div>
-                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 5MB</p>
                         <ol>
                           <li>Kwitansi UKT / SPP terbaru</li>
                           <li>Scan atau foto Kwitansi UKT / SPP yang diupload tidak terpotong</li>
@@ -396,7 +396,7 @@
                         <div class="row d-flex align-items-center">
                           <div class="col-md-10 d-flex justify-content-end mb-2">
                             <div class="custom-file">
-                              <input type="file" class="form-control">
+                              <input type="file" accept=".pdf" maxlength="5000000"  class="form-control" required>
                             </div>
                           </div>
                           <div class="col-md-2 d-flex justify-content-end mb-2">
@@ -410,14 +410,14 @@
                     <div class="card">
                       <div class="card-body">
                         <div class="section-title">Surat Keterangan TUGAS-AKHIR SKRIPSI <span class="required text-danger font-weight-bold">*</span></div>
-                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 1MB</p>
+                        <p><i class="fas fa-triangle-exclamation"></i> file pdf maks. 5MB</p>
                         <ol>
                           <li>Scan atau foto Surat Keterangan TUGAS-AKHIR SKRIPSI yang diupload tidak terpotong</li>
                         </ol>
                         <div class="row d-flex align-items-center">
                           <div class="col-md-10 d-flex justify-content-end mb-2">
                             <div class="custom-file">
-                              <input type="file" class="form-control">
+                              <input type="file" accept=".pdf" maxlength="5000000"  class="form-control" required>
                             </div>
                           </div>
                           <div class="col-md-2 d-flex justify-content-end mb-2">
@@ -474,19 +474,19 @@
                           </div>
                           <div class="form-group col-md-6">
                             <label for="alamat" class="form-label">Alamat Lengkap <span class="required text-danger font-weight-bold">*</span></label>
-                            <textarea class="form-control" name="alamat" id="alamat" rows="3" value="Jl. Cipto mangunkusumo RT 42 No 01 Bontang Barat" placeholder="Masukkan Alamat Lengkap Anda" style="height: 100px;"></textarea>
+                            <textarea class="form-control" name="alamat" id="alamat" rows="3" value="Jl. Cipto mangunkusumo RT 42 No 01 Bontang Barat" placeholder="Masukkan Alamat Lengkap Anda" style="height: 100px;" required></textarea>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="kode_pos">Kode Pos <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="number" class="form-control" id="kode_pos" value="75313" placeholder="Masukkan Kode Pos Anda">
+                            <input type="number" class="form-control" id="kode_pos" value="75313" placeholder="Masukkan Kode Pos Anda" required>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="no_hp">Nomor Handphone <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="number" class="form-control" id="no_hp" value="081255559642" placeholder="Masukkan Nomor Handphone Anda">
+                            <input type="number" class="form-control" id="no_hp" value="081255559642" placeholder="Masukkan Nomor Handphone Anda" required>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="email">Email <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="email" class="form-control" id="email" value="Novitaindrawati021@gmail.com" placeholder="Masukkan Email Anda">
+                            <input type="email" class="form-control" id="email" value="Novitaindrawati021@gmail.com" placeholder="Masukkan Email Anda" required>
                           </div>
                         </div>
                         <small class="font-italic text-danger font-weight-bold">(*) Data Wajib Diisi</small>
@@ -506,7 +506,7 @@
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="nama_ibu">Nama Ibu <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="text" class="form-control text-uppercase" id="name" value="Warniti Lydiawati" placeholder="Masukkan Nama Ibu Anda">
+                            <input type="text" class="form-control text-uppercase" id="name" value="Warniti Lydiawati" placeholder="Masukkan Nama Ibu Anda" required>
                           </div>
                         </div>
                       </div>
@@ -525,7 +525,7 @@
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="nim">NIM <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="number" class="form-control text-uppercase" id="name" value="1805125042" placeholder="Masukkan NIM Anda">
+                            <input type="number" class="form-control text-uppercase" id="name" value="1805125042" placeholder="Masukkan NIM Anda" required>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="form-strata">Strata <span class="required text-danger font-weight-bold">*</span></label>
@@ -576,7 +576,7 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text bg-primary text-white">Rp</span>
                               </div>
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" required>
                             </div>
                           </div>
                           <div class="form-group col-md-6">
@@ -585,7 +585,7 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text bg-primary text-white">Rp</span>
                               </div>
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" required>
                             </div>
                           </div>
                           <div class="form-group col-md-6">
@@ -594,7 +594,7 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text bg-primary text-white">Rp</span>
                               </div>
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" required>
                             </div>
                           </div>
                           <div class="form-group col-md-6">
@@ -603,17 +603,18 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text bg-primary text-white">Rp</span>
                               </div>
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" required>
                             </div>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="ipk">IPK <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="number" class="form-control" id="no_hp" placeholder="Masukkan Nilai Indeks Prestasi Anda">
+                            <input type="number" class="form-control" id="no_hp" placeholder="Masukkan Nilai Indeks Prestasi Anda" required>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+
                   <div class="tab-pane fade" id="bank" role="tabpanel" aria-labelledby="bank-tab">
                     <div class="card">
                       <div class="card-header">
@@ -638,11 +639,11 @@
                           </div>
                           <div class="form-group col-md-6">
                             <label for="nama_rekening">Nama Pemilik Rekening <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="text" class="form-control" id="nama_bank" value="Novita Indrawati" placeholder="Masukkan Nama Pemilik Rekening">
+                            <input type="text" class="form-control" id="nama_bank" value="Novita Indrawati" placeholder="Masukkan Nama Pemilik Rekening" required>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="no_rekening">NOMOR REKENING <span class="required text-danger font-weight-bold">*</span></label>
-                            <input type="number" class="form-control" id="no_rekening" value="0087524396" placeholder="Masukkan Nomor Rekening Anda">
+                            <input type="number" class="form-control" id="no_rekening" value="0087524396" placeholder="Masukkan Nomor Rekening Anda" required>
                           </div>
                         </div>
                       </div>
