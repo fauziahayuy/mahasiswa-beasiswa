@@ -3663,6 +3663,33 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
 
 /* faq */
 
+/* login */
+
+#login .card-form{
+  border: none;
+  background-color: #E7F1F6;
+}
+
+#login .card-header h5{
+  color: #00447A;
+}
+
+#login .btn-login{
+  background-color: #005685;
+  color: white;
+  font-weight: bold;
+}
+
+#login .btn-login:hover{
+  background-color: #004266;
+}
+
+#login .card-form{
+  color: #025969;
+  font-weight: bold;
+}
+/* login */
+
 
 @media (max-width: 992px) {
   .btn-grup{
